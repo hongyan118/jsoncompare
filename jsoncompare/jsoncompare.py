@@ -109,7 +109,8 @@ def _are_same(expected, actual, ignore_value_of_keys, ignore_missing_keys=False)
                              actual))
 
     # Compare primitive types immediately
-    if type(expected) in (int, str, bool, long, float, unicode):
+    #if type(expected) in (int, str, bool, long, float, unicode):
+    if type(expected) in (int, str, bool, float):
         return expected == actual, Stack()
 
     # Ensure collections have the same length (if applicable)
